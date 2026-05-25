@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Phones | La Frontera del Hardware Móvil</title>
+    <!-- Fuente moderna e impactante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Fondos de brillo sutiles (Glow effects) -->
+    <div class="glow-bg"></div>
+    <div class="glow-bg-2"></div>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <div class="logo">NEXUS.LAB</div>
+        <ul>
+            <li><a href="#procesadores">Procesadores</a></li>
+            <li><a href="#camaras">Cámaras</a></li>
+            <li><a href="#catalogo">Catálogo Técnico</a></li>
+            <li><a href="#comparador">Comparador</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>La Anatomía de los <br><span class="highlight-text">Smartphones Premium</span></h1>
+        <p>Explora la ingeniería microscópica y los sensores revolucionarios que definen a la actual gama ultra-alta en telefonía móvil.</p>
+        <a href="#procesadores" class="btn-premium">Iniciar Inmersión</a>
+    </section>
+
+    <!-- Sección Procesadores -->
+    <section class="container" id="procesadores">
+        <h2 class="section-title">Microarquitectura Extrema</h2>
+        <p class="section-subtitle">Potencia en Escala de Nanómetros</p>
+        
+        <div class="arquitectura-grid">
+            <div class="glass-card">
+                <div class="tech-tag">Litografía de 3nm</div>
+                <h3>Transistores de Última Era</h3>
+                <p>La reducción al nodo de 3 nanómetros permite integrar más de 16 mil millones de transistores en un chip del tamaño de una uña, reduciendo el consumo energético en un 30% y disparando el procesamiento neuronal.</p>
+            </div>
+            
+            <div class="glass-card">
+                <div class="tech-tag">Ray Tracing</div>
+                <h3>GPUs con Trazado de Rayos</h3>
+                <p>Las GPU móviles modernas incluyen aceleración por hardware para Ray Tracing. Esto genera reflejos, luces y sombras realistas en tiempo real, igualando las capacidades de las consolas de sobremesa hogareñas.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="tech-tag">NPU Inteligente</div>
+                <h3>Motores Neuronales Dedicados</h3>
+                <p>Capaces de realizar billones de operaciones por segundo (TOPS). La NPU procesa modelos de Inteligencia Artificial directamente en el dispositivo, mejorando la fotografía computacional al instante.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cámaras -->
+    <section class="container camera-section" id="camaras">
+        <h2 class="section-title">Óptica y Sensores</h2>
+        <p class="section-subtitle">Capturando fotones con precisión pura</p>
+
+        <div class="camara-layout">
+            <div>
+                <h3 class="camera-layout-title">El tamaño sí importa</h3>
+                <p class="camera-text">Más allá de los megapíxeles, el secreto de los teléfonos premium reside en los sensores de tipo 1 pulgada. Al tener un área de captación masiva física, absorben luz de forma natural, reduciendo drásticamente el ruido digital sin depender excesivamente del software.</p>
+                <p class="camera-text">Combinado con aperturas variables (ej. f/1.4 a f/4.0), las ópticas modernas emulan a la perfección el comportamiento físico de las cámaras réflex profesionales.</p>
+            </div>
+            <div class="camara-stats">
+                <div class="glass-card stat-box">
+                    <h4>1 Pulgada</h4>
+                    <p>Tamaño de sensor físico máximo actual.</p>
+                </div>
+                <div class="glass-card stat-box">
+                    <h4>200 MP</h4>
+                    <p>Resolución ultraclara con Pixel Binning 16-en-1.</p>
+                </div>
+                <div class="glass-card stat-box">
+                    <h4>Periscopio</h4>
+                    <p>Zoom óptico real mediante prismas reflectores.</p>
+                </div>
+                <div class="glass-card stat-box">
+                    <h4>14 Bits</h4>
+                    <p>Profundidad de color capturada en formato RAW.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CATÁLOGO CON IMÁGENES PREGUARDADAS -->
+    <section class="container" id="catalogo">
+        <h2 class="section-title">Laboratorio de Dispositivos</h2>
+        <p class="section-subtitle">Selecciona un modelo para cargar su imagen fija y su ficha técnica</p>
+
+        <div class="catalog-wrapper glass-card">
+            <!-- Selector de Smartphone -->
+            <div class="selector-dispositivo">
+                <label for="phone-selector">Elige un Smartphone Ultra:</label>
+                <select id="phone-selector">
+                    <option value="" disabled selected>-- Selecciona un modelo --</option>
+                    <option value="samsung_s26_ultra">Samsung Galaxy S26 Ultra</option>
+                    <option value="iphone_17_pro_max">Apple iPhone 17 Pro Max</option>
+                    <option value="xiaomi_15_ultra">Xiaomi 15 Ultra</option>
+                    <option value="google_pixel_9_ultra">Google Pixel 9 Ultra</option>
+                    <option value="vivo_x300_ultra">Vivo X300 Ultra</option>
+                    <option value="huawei_pura_80">Huawei Pura 80 Pro+</option>
+                    <option value="oppo_find_x9_ultra">Oppo Find X9 Ultra</option>
+                    <option value="motorola_signature">Motorola Signature Edition</option>
+                </select>
+            </div>
+
+            <!-- Ficha Técnica Dinámica Resultante (Imagen arriba, Info abajo) -->
+            <div class="ficha-tecnica-layout" id="ficha-layout" style="display: none;">
+                <div class="phone-image-frame">
+                    <img id="phone-view" src="" alt="Smartphone Premium">
+                </div>
+                <div class="phone-data-specs">
+                    <h3 id="phone-title-display">Modelo</h3>
+                    <div id="specs-table-container">
+                        <!-- Las especificaciones se inyectan aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Comparador Interactivo -->
+    <section class="container" id="comparador">
+        <h2 class="section-title">Batalla de Hardware</h2>
+        <p class="section-subtitle">Compara los estándares top del mercado</p>
+
+        <div class="comparador-container glass-card">
+            <div class="selectores">
+                <button class="btn-select active" id="btn-chips">Procesadores</button>
+                <button class="btn-select" id="btn-camaras">Sensores de Cámara</button>
+            </div>
+
+            <div class="panel-comparador" id="datos-comparador">
+                <!-- Se inyecta dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NEXUS.LAB - Ingeniería y Estética de Vanguardia Móvil. Diseñado para mentes exigentes.</p>
+    </footer>
+
+    <!-- Vinculación del archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

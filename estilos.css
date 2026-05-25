@@ -1,0 +1,463 @@
+/* --- VARIABLES Y CONFIGURACIÓN PREMIUM --- */
+:root {
+    --bg-principal: #070709;
+    --bg-tarjeta: rgba(20, 20, 25, 0.6);
+    --borde-cristal: rgba(255, 255, 255, 0.08);
+    --color-acento: #00f0ff; 
+    --color-secundario: #8a2be2; 
+    --texto-blanco: #ffffff;
+    --texto-mutado: #a0a0b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-blanco);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- ELEMENTOS DE DISEÑO DE FONDO --- */
+.glow-bg {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,240,255,0.05) 0%, rgba(138,43,226,0.05) 50%, rgba(0,0,0,0) 100%);
+    top: -200px;
+    left: -200px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glow-bg-2 {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(138,43,226,0.04) 0%, rgba(0,0,0,0) 70%);
+    bottom: -100px;
+    right: -100px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- CLASE GLASSMORPHISM REUTILIZABLE --- */
+.glass-card {
+    background: var(--bg-tarjeta);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--borde-cristal);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.05);
+}
+
+/* --- NAVEGACIÓN --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: rgba(7, 7, 9, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--borde-cristal);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, var(--texto-blanco), var(--color-acento));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--texto-mutado);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* --- CONTENEDORES --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 30%, var(--texto-mutado) 70%, var(--color-acento));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight-text {
+    color: var(--color-acento);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--texto-mutado);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.btn-premium {
+    background: linear-gradient(45deg, var(--color-acento), var(--color-secundario));
+    color: var(--texto-blanco);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.btn-premium:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 240, 255, 0.5);
+}
+
+/* --- SECCIÓN TITULOS --- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-acento);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 4rem;
+    font-weight: 600;
+}
+
+/* --- GRID DE PROCESADORES --- */
+.arquitectura-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--color-acento);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.glass-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.glass-card p {
+    color: var(--texto-mutado);
+    font-size: 0.95rem;
+}
+
+/* --- SECCIÓN CÁMARAS --- */
+.camera-section {
+    background: radial-gradient(rgba(138,43,226,0.03) 0%, transparent 80%);
+}
+
+.camara-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.camera-layout-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.camera-text {
+    color: var(--texto-mutado);
+    margin-bottom: 1.5rem;
+}
+
+.camara-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.stat-box {
+    border-left: 3px solid var(--color-secundario);
+    padding-left: 1rem;
+}
+
+.stat-box h4 {
+    font-size: 2rem;
+    color: var(--texto-blanco);
+}
+
+.stat-box p {
+    color: var(--texto-mutado);
+    font-size: 0.85rem;
+}
+
+/* --- CATÁLOGO --- */
+.catalog-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.selector-dispositivo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.selector-dispositivo label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--texto-blanco);
+}
+
+.selector-dispositivo select {
+    background: #121216;
+    border: 1px solid var(--borde-cristal);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    color: var(--texto-blanco);
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.selector-dispositivo select:focus {
+    border-color: var(--color-acento);
+}
+
+/* Estructura Solicitada: Imagen Arriba, Ficha Técnica Abajo */
+.ficha-tecnica-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.phone-image-frame {
+    width: 100%;
+    max-width: 360px;
+    height: 360px;
+    background: radial-gradient(rgba(0, 240, 255, 0.04), transparent 70%);
+    border-radius: 20px;
+    border: 1px solid var(--borde-cristal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.phone-image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.phone-data-specs {
+    width: 100%;
+}
+
+.phone-data-specs h3 {
+    font-size: 2rem;
+    color: var(--color-acento);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 0.5rem;
+}
+
+/* --- COMPARADOR DINÁMICO --- */
+.comparador-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.selectores {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-select {
+    background: transparent;
+    border: 1px solid var(--borde-cristal);
+    color: var(--texto-mutado);
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-select.active, .btn-select:hover {
+    border-color: var(--color-acento);
+    color: var(--texto-blanco);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.panel-comparador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-height: 250px;
+}
+
+.col-comp {
+    background: rgba(255,255,255,0.02);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.col-comp h4 {
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 0.9rem 0;
+    font-size: 0.95rem;
+}
+
+.spec-item span:first-child {
+    color: var(--texto-mutado);
+}
+
+.spec-item span:last-child {
+    font-weight: 600;
+    color: var(--texto-blanco);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--borde-cristal);
+    color: var(--texto-mutado);
+    font-size: 0.85rem;
+    margin-top: 5rem;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE DESIGN COMPLETAMENTE OPTIMIZADO --- */
+@media (max-width: 768px) {
+    /* Ajuste del título principal para que no se desborde */
+    .hero h1 { 
+        font-size: 2.4rem; 
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Oculta el menú (recuerda que luego necesitarás un botón hamburguesa) */
+    nav ul { 
+        display: none; 
+    } 
+    
+    /* Pasa las secciones de 2 columnas a 1 sola columna */
+    .camara-layout { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    
+    .panel-comparador { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem; 
+    }
+
+    /* Botones del comparador cómodos para el dedo en pantallas táctiles */
+    .selectores {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+    
+    .btn-select {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Desactivamos los brillos fijos para mejorar el rendimiento del scroll en celular */
+    .glow-bg, .glow-bg-2 {
+        display: none; 
+    }
+}
